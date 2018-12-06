@@ -1,0 +1,26 @@
+{
+  "name": "autopipe",
+  "version": "1.0.0",
+  "description": "A CLI script runner to easily chain together JS automation scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "script-runner",
+    "script-composition"
+  ],
+  "author": "Chris Stead",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "dject": "^1.10.0",
+    "npm-man": "^0.4.3",
+    "prompt": "^1.0.0"
+  }
+}
