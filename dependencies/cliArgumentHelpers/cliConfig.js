@@ -6,24 +6,27 @@ function cliConfig() {
             name: 'help',
             alias: 'h',
             type: Boolean,
-            description: 'See autopipe options'
+            description: 'Output all autopipe options'
         },
 
         {
             name: 'ls',
-            type: Boolean
+            type: Boolean,
+            description: 'Show all commands which can be run from autopipe'
         },
 
         {
             name: 'configure',
-            type: Boolean
+            type: Boolean,
+            description: 'Configure autopipe installation'
         },
 
         {
-            name: 'commands',
+            name: 'run',
             type: String,
             multiple: true,
-            defaultOption: true
+            defaultOption: true,
+            description: 'Pipe and run commands'
         }
     ];
 }
