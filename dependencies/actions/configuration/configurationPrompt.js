@@ -7,7 +7,8 @@ function configurationPrompt (
     const promptSchema = {
         properties: {
             commandDirectory: {
-                message: 'Which directory are your commands in?',
+                message: 'Provide your scripts directory or press enter for default.\n',
+                default: process.cwd(),
                 required: true
             }
         }
@@ -18,6 +19,7 @@ function configurationPrompt (
 
         prompt.start();
         prompt.message = '';
+        prompt.delimiter = '';
 
         prompt.get(promptSchema, continuation);
     }
