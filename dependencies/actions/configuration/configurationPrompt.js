@@ -10,7 +10,13 @@ function configurationPrompt (
                 message: 'Provide your scripts directory or press enter for default.\n',
                 default: process.cwd(),
                 required: true
+            },
+            globbingRules: {
+                message: 'Any special globbing rules?\n',
+                default: '**/*.js',
+                required: true
             }
+
         }
     };
 

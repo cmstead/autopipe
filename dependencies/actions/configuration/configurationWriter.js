@@ -1,29 +1,21 @@
 function configurationWriter (
-    fs,
-    packageValues,
-    pathHelper
-
+    configFSHelper,
+    packageValues
 ) {
     'use strict';
-
-    function saveConfig(config) {
-        const configPath = pathHelper.getConfigPath();
-        const configContent = JSON.stringify(config, null, 4) + '\n';
-
-        fs.writeFileSync(configPath, configContent);
-    }
 
     function buildAutopipeConfig(results) {
         return {
             version: packageValues.version,
-            commandDirectory: results.commandDirectory
+            commandDirectory: results.commandDirectory,
+            globbingRules: results.globbingRules
         };
     }
 
     function writeConfig(results) {
         const configData = buildAutopipeConfig(results);
 
-        saveConfig(configData);
+        configFSHelper.writeConfig(configData);
     }
 
     return {

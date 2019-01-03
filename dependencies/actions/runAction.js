@@ -1,8 +1,10 @@
-function runAction () {
+function runAction (
+    logger
+) {
     'use strict';
 
     return function () {
-        console.log('Commands will be run');
+        logger.log('Commands will be run');
     };
 }
 

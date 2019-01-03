@@ -1,8 +1,10 @@
-function defaultAction () {
+function defaultAction (
+    logger
+) {
     'use strict';
 
     return function() {
-        console.log('Cannot run, no commands were specified.');
+        logger.log('Cannot run, no commands were specified.');
     };
 }
 
